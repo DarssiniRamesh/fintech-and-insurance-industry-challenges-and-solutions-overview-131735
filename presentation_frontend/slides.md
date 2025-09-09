@@ -91,26 +91,28 @@ css: |
 ---
 
 # Fintech Use Cases
-<div class="grid-2x2 clean">
-  <div class="tile">
-    <div class="glyph" aria-hidden="true">🏦</div>
-    <div class="tile-h">Paperless loan origination and approval across BFSIs</div>
-    <div class="tile-cap">Streamlined intake, verifiable proofs</div>
-  </div>
-  <div class="tile">
-    <div class="glyph" aria-hidden="true">🏠</div>
-    <div class="tile-h">Digital mortgage processing with remote verification</div>
-    <div class="tile-cap">Faster closings via remote eKYC</div>
-  </div>
-  <div class="tile">
-    <div class="glyph" aria-hidden="true">🌐</div>
-    <div class="tile-h">Frictionless remote onboarding for neo-banks and fintechs</div>
-    <div class="tile-cap">Low-friction identity checks</div>
-  </div>
-  <div class="tile">
-    <div class="glyph" aria-hidden="true">📄</div>
-    <div class="tile-h">Parametric insurance - Smart Contract Payout</div>
-    <div class="tile-cap">Automatic, rapid claims disbursement via on-chain triggers</div>
+<div class="use-cases-wrap">
+  <div class="use-cases-grid">
+    <div class="use-card">
+      <div class="use-icon" aria-hidden="true">🏦</div>
+      <div class="use-title">Paperless loan origination and approval across BFSIs</div>
+      <div class="use-cap">Streamlined intake, verifiable proofs</div>
+    </div>
+    <div class="use-card">
+      <div class="use-icon" aria-hidden="true">🏠</div>
+      <div class="use-title">Digital mortgage processing with remote verification</div>
+      <div class="use-cap">Faster closings via remote eKYC</div>
+    </div>
+    <div class="use-card">
+      <div class="use-icon" aria-hidden="true">🌐</div>
+      <div class="use-title">Frictionless remote onboarding for neo-banks and fintechs</div>
+      <div class="use-cap">Low-friction identity checks</div>
+    </div>
+    <div class="use-card">
+      <div class="use-icon" aria-hidden="true">📄</div>
+      <div class="use-title">Parametric insurance - Smart Contract Payout</div>
+      <div class="use-cap">Automatic, rapid claims disbursement via on-chain triggers</div>
+    </div>
   </div>
 </div>
 
