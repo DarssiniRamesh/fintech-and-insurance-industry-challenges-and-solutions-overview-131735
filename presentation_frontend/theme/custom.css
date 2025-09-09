@@ -23,9 +23,15 @@
 /* Base canvas */
 :root, html, body, .slidev-root, .slidev-page, .slidev-layout, .slidev-layout.current {
   background: var(--bg-base) !important;
-  color: var(--text-strong);
+  color: var(--text-strong); /* maps to #325c92 via tokens */
   /* Use Calibri with sensible fallbacks across all slides and elements */
   font-family: Calibri, "Helvetica Neue", Arial, Helvetica, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Nimbus Sans L", "Liberation Sans", "Cantarell", "Noto Sans", "DejaVu Sans", "Source Sans Pro", "Droid Sans", "Segoe UI Variable", sans-serif;
+}
+
+/* Apply default text color to common text elements to ensure consistency */
+h1, h2, h3, h4, h5, h6,
+p, li, span, div, small, strong, em, label, figcaption, caption, th, td {
+  color: var(--text-strong);
 }
 
 /* Helpers */

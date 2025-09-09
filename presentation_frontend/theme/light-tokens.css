@@ -7,7 +7,8 @@
   --brand-primary-border: #b3c5df;
 
   /* Neutrals on white canvas */
-  --text-strong: #111827;
+  /* Set default strong text color to the requested teal shade */
+  --text-strong: #325c92;
   --text-muted: #6B7280;
   --bg-base: #ffffff;
   --bg-alt: #f9fafb;
