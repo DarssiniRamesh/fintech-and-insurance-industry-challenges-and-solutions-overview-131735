@@ -17,7 +17,7 @@ css: |
 # Industry Challenges
 <div class="divider mb-4"></div>
 
-<div class="icon-grid-5">
+<div class="icon-grid-5 compact">
   <div class="icon-card">
     <div class="icn" aria-hidden="true">🛡️</div>
     <div class="icn-title">Slow and costly KYC/onboarding</div>

@@ -67,6 +67,11 @@ p, li, span, div, small, strong, em, label, figcaption, caption, th, td {
 @media (max-width: 1100px) { .icon-grid-5 { grid-template-columns: repeat(3, minmax(0,1fr)); } }
 @media (max-width: 720px) { .icon-grid-5 { grid-template-columns: repeat(1, minmax(0,1fr)); } }
 
+/* Compact variant for slide 1 to reduce spacing between cards */
+.icon-grid-5.compact { gap: 10px; }
+@media (max-width: 1100px) { .icon-grid-5.compact { gap: 10px; } }
+@media (max-width: 720px) { .icon-grid-5.compact { gap: 8px; } }
+
 .icon-card {
   background: #fff;
   border: 1px solid var(--line);
@@ -74,19 +79,28 @@ p, li, span, div, small, strong, em, label, figcaption, caption, th, td {
   padding: 16px;
   text-align: center;
 }
+
+/* Tighter card spacing only when using the compact grid */
+.icon-grid-5.compact .icon-card { padding: 12px; border-radius: 14px; }
+
 .icn {
   font-size: 28px;
   color: var(--brand-primary);
 }
+.icon-grid-5.compact .icn { font-size: 26px; }
+
 .icn-title {
   font-weight: 800;
   color: var(--text-strong);
-  margin-top: 8px;
+  margin-top: 6px;
 }
+.icon-grid-5.compact .icn-title { margin-top: 4px; }
+
 .icn-cap {
   color: var(--text-muted);
   margin-top: 4px;
 }
+.icon-grid-5.compact .icn-cap { margin-top: 2px; }
 
 /* Slide 2: Constellation */
 .central-constellation {
