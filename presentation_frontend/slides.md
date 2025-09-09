@@ -91,26 +91,36 @@ css: |
 ---
 
 # Fintech Use Cases
-<div class="grid-2x2 clean">
-  <div class="tile">
-    <div class="glyph" aria-hidden="true">🏦</div>
-    <div class="tile-h">Paperless loan origination and approval across BFSIs</div>
-    <div class="tile-cap">Streamlined intake, verifiable proofs</div>
+<div class="features-split narrow centered">
+  <div class="features-left">
+    <div class="mini-card">
+      <div class="mini-accent" aria-hidden="true"></div>
+      <div class="mini-content">
+        <div class="mini-title"><span class="mini-icon" aria-hidden="true">🏦</span> Paperless loan origination</div>
+        <div class="mini-cap">Streamlined intake and verifiable proofs across BFSIs</div>
+      </div>
+    </div>
+    <div class="mini-card">
+      <div class="mini-accent" aria-hidden="true"></div>
+      <div class="mini-content">
+        <div class="mini-title"><span class="mini-icon" aria-hidden="true">🏠</span> Remote digital mortgages</div>
+        <div class="mini-cap">Faster closings with secure remote eKYC</div>
+      </div>
+    </div>
+    <div class="mini-card">
+      <div class="mini-accent" aria-hidden="true"></div>
+      <div class="mini-content">
+        <div class="mini-title"><span class="mini-icon" aria-hidden="true">🌐</span> Frictionless onboarding</div>
+        <div class="mini-cap">Low-friction identity checks for neo-banks and fintechs</div>
+      </div>
+    </div>
   </div>
-  <div class="tile">
-    <div class="glyph" aria-hidden="true">🏠</div>
-    <div class="tile-h">Digital mortgage processing with remote verification</div>
-    <div class="tile-cap">Faster closings via remote eKYC</div>
-  </div>
-  <div class="tile">
-    <div class="glyph" aria-hidden="true">🌐</div>
-    <div class="tile-h">Frictionless remote onboarding for neo-banks and fintechs</div>
-    <div class="tile-cap">Low-friction identity checks</div>
-  </div>
-  <div class="tile">
-    <div class="glyph" aria-hidden="true">📄</div>
-    <div class="tile-h">Parametric insurance - Smart Contract Payout</div>
-    <div class="tile-cap">Automatic, rapid claims disbursement via on-chain triggers</div>
+
+  <div class="features-right framed-visual">
+    <div class="visual-pill">Demo</div>
+    <div class="visual-placeholder" role="img" aria-label="Product mockup placeholder">
+      <div class="visual-caption">Product mockup / screenshot</div>
+    </div>
   </div>
 </div>
 
