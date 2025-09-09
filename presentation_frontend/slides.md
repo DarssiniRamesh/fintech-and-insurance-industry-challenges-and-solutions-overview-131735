@@ -109,8 +109,8 @@ css: |
   </div>
   <div class="tile">
     <div class="glyph" aria-hidden="true">📄</div>
-    <div class="tile-h">Automated regulatory KYC, audit trails, and secure data interop</div>
-    <div class="tile-cap">Compliance-ready records</div>
+    <div class="tile-h">Parametric insurance - Smart Contract Payout</div>
+    <div class="tile-cap">Automatic, rapid claims disbursement via on-chain triggers</div>
   </div>
 </div>
 
