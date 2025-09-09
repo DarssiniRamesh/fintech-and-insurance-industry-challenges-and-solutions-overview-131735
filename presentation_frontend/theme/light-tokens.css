@@ -1,18 +1,18 @@
 :root {
-  /* Brand palette per request */
+  /* Primary palette (unified #325c92 family) */
   --brand-primary: #325c92;
   --brand-primary-dark: #223b5a;
   --brand-primary-light: #6d8fc1;
   --brand-primary-lighter: #eaf1fa;
   --brand-primary-border: #b3c5df;
 
-  /* Neutrals on light */
+  /* Neutrals on white canvas */
   --text-strong: #111827;
   --text-muted: #6B7280;
   --bg-base: #ffffff;
   --bg-alt: #f9fafb;
   --line: #E5E7EB;
 
-  /* Action */
+  /* Actions */
   --cta-hover: #14B8A6;
 }
