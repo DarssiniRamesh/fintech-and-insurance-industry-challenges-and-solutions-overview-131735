@@ -1,1 +1,3 @@
-# fintech-and-insurance-industry-challenges-and-solutions-overview-131735
+# Project Repository
+
+This is the initial README file for the project.
