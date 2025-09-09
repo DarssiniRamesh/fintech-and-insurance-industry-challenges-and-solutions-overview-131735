@@ -193,105 +193,14 @@ p, li, span, div, small, strong, em, label, figcaption, caption, th, td {
   line-height: 1.25;
 }
 
-/* Slide 4: replaced with a narrower, centered split layout */
-.features-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  align-items: start;
-  margin: 0 auto;
-}
-.features-split.narrow {
-  max-width: 980px; /* narrower content area */
-}
-.features-split.centered {
-  justify-content: center;
-}
-@media (max-width: 960px) {
-  .features-split { grid-template-columns: 1fr; }
-}
-
-/* Left column: mini feature cards */
-.features-left {
-  display: grid;
-  gap: 12px;
-}
-.mini-card {
-  display: grid;
-  grid-template-columns: 4px 1fr;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  overflow: hidden;
-}
-.mini-accent {
-  background: var(--brand-primary);
-}
-.mini-content {
-  padding: 12px 14px;
-  display: grid;
-  gap: 6px;
-}
-.mini-title {
-  font-weight: 800;
-  color: var(--text-strong);
-  font-size: clamp(16px, 1.8vw, 20px); /* larger main text */
-  line-height: 1.25;
-  letter-spacing: -0.01em;
-}
-.mini-icon {
-  color: var(--brand-primary);
-  margin-right: 8px;
-  font-size: 1.1em;
-}
-.mini-cap {
-  color: var(--text-muted);
-  font-size: clamp(14px, 1.5vw, 16px);
-  line-height: 1.35;
-}
-
-/* Right column: framed visual */
-.framed-visual {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 16px;
-  position: relative;
-  min-height: 220px;
-  display: grid;
-}
-.visual-pill {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 4px 10px;
-  border: 1px solid #4338CA;
-  color: #4338CA;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-}
-.visual-placeholder {
-  border: 1px dashed var(--brand-primary-border);
-  border-radius: 12px;
-  background: var(--brand-primary-lighter);
-  display: grid;
-  place-items: center;
-  padding: 18px;
-}
-.visual-caption {
-  color: var(--text-muted);
-  font-size: clamp(13px, 1.4vw, 15px);
-}
-
-/* Deprecated: retain old classes for safety (unused after redesign) */
+/* Slide 4: 2x2 matrix */
 .grid-2x2.clean {
   display: grid;
   grid-template-columns: repeat(2, minmax(0,1fr));
   gap: 16px;
 }
 @media (max-width: 780px) { .grid-2x2.clean { grid-template-columns: 1fr; } }
+
 .tile {
   background: #fff;
   border: 1px solid var(--line);
@@ -299,8 +208,14 @@ p, li, span, div, small, strong, em, label, figcaption, caption, th, td {
   padding: 16px;
   text-align: left;
 }
-.glyph { font-size: 24px; color: var(--brand-primary); }
-.tile-h { font-weight: 800; margin-top: 6px; }
+.glyph {
+  font-size: 24px;
+  color: var(--brand-primary);
+}
+.tile-h {
+  font-weight: 800;
+  margin-top: 6px;
+}
 .tile-cap { color: var(--text-muted); }
 
 /* Slide 5: Parametric flow */
