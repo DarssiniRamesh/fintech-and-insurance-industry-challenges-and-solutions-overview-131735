@@ -8,7 +8,7 @@ class: text-left
 mdc: true
 transition: slide-left
 fonts:
-  sans: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial
+  sans: Calibri, "Helvetica Neue", Arial, Helvetica, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Nimbus Sans L", "Liberation Sans", "Cantarell", "Noto Sans", "DejaVu Sans", "Source Sans Pro", "Droid Sans", "Segoe UI Variable", sans-serif
   mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
 css: |
   @import "./style.css";

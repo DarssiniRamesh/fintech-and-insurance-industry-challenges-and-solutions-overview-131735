@@ -24,7 +24,8 @@
 :root, html, body, .slidev-root, .slidev-page, .slidev-layout, .slidev-layout.current {
   background: var(--bg-base) !important;
   color: var(--text-strong);
-  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  /* Use Calibri with sensible fallbacks across all slides and elements */
+  font-family: Calibri, "Helvetica Neue", Arial, Helvetica, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Nimbus Sans L", "Liberation Sans", "Cantarell", "Noto Sans", "DejaVu Sans", "Source Sans Pro", "Droid Sans", "Segoe UI Variable", sans-serif;
 }
 
 /* Helpers */
