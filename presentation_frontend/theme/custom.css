@@ -1,0 +1,354 @@
+@import "./light-tokens.css";
+
+/* Map tokens to theme-level variables */
+:root {
+  --theme-bg-canvas: var(--bg-base);
+  --theme-bg-elevated: #ffffff;
+
+  --theme-text-primary: var(--text-strong);
+  --theme-text-secondary: var(--text-muted);
+
+  --theme-border-subtle: var(--line);
+  --theme-border-strong: #cfd8e6;
+
+  --theme-primary-600: var(--brand-primary-dark);
+  --theme-primary-500: var(--brand-primary);
+  --theme-primary-400: var(--brand-primary-light);
+  --theme-primary-200: var(--brand-primary-border);
+  --theme-primary-50:  var(--brand-primary-lighter);
+
+  --text-link: var(--brand-primary);
+}
+
+/* Base canvas */
+:root, html, body, .slidev-root, .slidev-page, .slidev-layout, .slidev-layout.current {
+  background: var(--bg-base) !important;
+  color: var(--text-strong); /* maps to #325c92 via tokens */
+  /* Use Calibri with sensible fallbacks across all slides and elements */
+  font-family: Calibri, "Helvetica Neue", Arial, Helvetica, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Nimbus Sans L", "Liberation Sans", "Cantarell", "Noto Sans", "DejaVu Sans", "Source Sans Pro", "Droid Sans", "Segoe UI Variable", sans-serif;
+}
+
+/* Apply default text color to common text elements to ensure consistency */
+h1, h2, h3, h4, h5, h6,
+p, li, span, div, small, strong, em, label, figcaption, caption, th, td {
+  color: var(--text-strong);
+}
+
+/* Helpers */
+.muted, .subtle { color: var(--text-muted); }
+.mt-4 { margin-top: 24px; }
+.mb-4 { margin-bottom: 24px; }
+
+/* Divider */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--line);
+}
+
+/* Eyebrow */
+.section-eyebrow {
+  display: inline-flex;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Slide 1: Challenges (5 icons) */
+.icon-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0,1fr));
+  gap: 16px;
+}
+@media (max-width: 1100px) { .icon-grid-5 { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+@media (max-width: 720px) { .icon-grid-5 { grid-template-columns: repeat(1, minmax(0,1fr)); } }
+
+/* Compact variant for slide 1 to reduce spacing between cards */
+.icon-grid-5.compact { gap: 10px; }
+@media (max-width: 1100px) { .icon-grid-5.compact { gap: 10px; } }
+@media (max-width: 720px) { .icon-grid-5.compact { gap: 8px; } }
+
+.icon-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+}
+
+/* Tighter card spacing only when using the compact grid */
+.icon-grid-5.compact .icon-card { padding: 12px; border-radius: 14px; }
+
+.icn {
+  font-size: 28px;
+  color: var(--brand-primary);
+}
+.icon-grid-5.compact .icn { font-size: 26px; }
+
+.icn-title {
+  font-weight: 800;
+  color: var(--text-strong);
+  margin-top: 6px;
+}
+.icon-grid-5.compact .icn-title { margin-top: 4px; }
+
+.icn-cap {
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+.icon-grid-5.compact .icn-cap { margin-top: 2px; }
+
+/* Slide 2: Constellation */
+.central-constellation {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: 24px;
+}
+.node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--brand-primary-border);
+  background: #fff;
+  color: var(--brand-primary-dark);
+  font-weight: 700;
+}
+.node.main {
+  background: var(--brand-primary);
+  color: #fff;
+  border-color: var(--brand-primary);
+}
+.node.light {
+  background: var(--brand-primary-lighter);
+}
+.constellation-lines { display: flex; gap: 8px; }
+.constellation-lines span {
+  width: 28px; height: 2px; background: var(--brand-primary-border); display: inline-block;
+}
+
+/* Bullets */
+.bullets {
+  display: grid;
+  gap: 8px;
+  color: var(--text-strong);
+  padding-left: 0;
+  list-style: none;
+}
+.bullets li { position: relative; padding-left: 16px; }
+.bullets li::before {
+  content: "";
+  position: absolute; left: 0; top: 10px;
+  width: 8px; height: 8px; border-radius: 999px; background: var(--brand-primary);
+}
+
+/* Slide 3: What’s Klefki hero */
+.hero-center {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 24px;
+  align-items: center;
+}
+@media (max-width: 900px) { .hero-center { grid-template-columns: 1fr; } }
+
+.device.clean {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 12px;
+  width: 300px;
+  margin: 0 auto;
+}
+.device-top {
+  height: 18px; display: flex; justify-content: center; align-items: center;
+}
+.device-top .camera {
+  width: 60px; height: 6px; border-radius: 999px; background: var(--brand-primary-border);
+}
+.device-screen {
+  border: 1px solid var(--brand-primary-border);
+  border-radius: 16px;
+  padding: 16px;
+  display: grid; gap: 10px;
+  background: var(--brand-primary-lighter);
+}
+.pill {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 8px 10px; border-radius: 12px; font-weight: 700;
+}
+.pill.solid { background: var(--brand-primary); color: #fff; }
+.pill.semi { background: var(--brand-primary-light); color: #fff; }
+.pill.ghost { background: #fff; color: var(--brand-primary-dark); border: 1px solid var(--brand-primary-border); }
+
+.hero-copy .h2-tight {
+  margin-top: 0;
+  font-size: clamp(22px, 2.2vw, 28px);
+  line-height: 1.25;
+}
+
+/* Slide 4: 2x2 matrix */
+.grid-2x2.clean {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 16px;
+}
+@media (max-width: 780px) { .grid-2x2.clean { grid-template-columns: 1fr; } }
+
+.tile {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+  text-align: left;
+}
+.glyph {
+  font-size: 24px;
+  color: var(--brand-primary);
+}
+.tile-h {
+  font-weight: 800;
+  margin-top: 6px;
+}
+.tile-cap { color: var(--text-muted); }
+
+/* Slide 5: Parametric flow */
+.flow-timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 16px;
+  align-items: start;
+}
+@media (max-width: 960px) { .flow-timeline { grid-template-columns: 1fr; } }
+
+.flow-line {
+  position: absolute;
+  top: 32px; left: 0; right: 0;
+  height: 2px; background: var(--brand-primary-border);
+}
+.flow-step {
+  background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 14px; text-align: left;
+}
+.flow-step .dot {
+  width: 12px; height: 12px; border-radius: 999px;
+  background: var(--brand-primary); box-shadow: 0 0 0 4px var(--brand-primary-lighter);
+  margin-bottom: 8px;
+}
+.flow-label { font-weight: 800; }
+.flow-cap { color: var(--text-muted); }
+
+/* Slide 6: Before/After */
+.before-after {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 840px) { .before-after { grid-template-columns: 1fr; } }
+
+.ba-card {
+  background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 16px;
+}
+.ba-card.highlight { outline: 2px solid var(--brand-primary); }
+.ba-label {
+  display: inline-block; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line);
+  color: var(--text-muted); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.ba-figure {
+  font-weight: 800; color: var(--brand-primary-dark); font-size: clamp(22px, 2.2vw, 28px);
+  margin: 8px 0 8px;
+}
+.ba-figure.muted { color: var(--text-muted); }
+
+.checklist { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 8px; color: var(--text-muted); }
+.checklist li { position: relative; padding-left: 18px; }
+.checklist li::before {
+  content: ""; position: absolute; left: 0; top: 8px; width: 8px; height: 8px; border-radius: 999px; background: var(--brand-primary);
+}
+.checklist.good li::before { background: var(--cta-hover); }
+
+/* Slide 7: Spotlight row */
+.spotlight-row {
+  display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px;
+}
+@media (max-width: 980px) { .spotlight-row { grid-template-columns: 1fr; } }
+
+.spotlight {
+  background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: grid; gap: 6px;
+}
+.spot-h { font-weight: 800; color: var(--text-strong); }
+.spot-cap { color: var(--text-muted); }
+
+/* Slide 8: Product cards */
+.product-cards {
+  display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 16px;
+}
+@media (max-width: 1080px) { .product-cards { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 680px) { .product-cards { grid-template-columns: 1fr; } }
+
+.p-card {
+  background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: grid; gap: 6px;
+}
+.p-title { font-weight: 800; color: var(--text-strong); }
+.p-cap { color: var(--text-muted); }
+
+/* Slide 4 (repurposed for Fintech Use Cases): Centered, constrained card grid */
+.use-cases-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* Reduce overall content width so cards are not too wide */
+  padding: 8px 0;
+}
+.use-cases-grid {
+  /* Constrain to a pleasant readable width */
+  max-width: 960px; /* keeps layout from stretching edge-to-edge on widescreens */
+  width: 100%;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (max-width: 900px) {
+  .use-cases-grid { max-width: 760px; }
+}
+@media (max-width: 760px) {
+  .use-cases-grid { grid-template-columns: 1fr; max-width: 560px; }
+}
+
+/* Card styling: modern, subtle shadow and crisp border */
+.use-card {
+  background: var(--theme-bg-elevated);
+  border: 1px solid var(--theme-border-subtle);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 4px 10px rgba(50, 92, 146, 0.06); /* soft brand-tinted shadow */
+  display: grid;
+  gap: 6px;
+}
+.use-icon {
+  font-size: 26px;
+  color: var(--theme-primary-500);
+}
+.use-title {
+  font-weight: 800;
+  color: var(--theme-text-primary);
+  line-height: 1.25;
+}
+.use-cap {
+  color: var(--theme-text-secondary);
+}
+
+/* Optional hover polish (kept subtle for presentation) */
+.use-card:hover {
+  border-color: var(--theme-primary-200);
+  transform: translateY(-1px);
+  transition: all 140ms ease;
+}
